@@ -1,0 +1,142 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "budibase-scatter-plot",
+    "friendlyName": "budibase-scatter-plot",
+    "description": "A scatter graph for Erasme",
+    "icon": "Text",
+    "settings": [
+      {
+        "section": true,
+        "name": "Data Mapping",
+        "settings": [
+          {
+            "type": "dataProvider",
+            "label": "Data Provider",
+            "key": "dataProvider",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Serie category column",
+            "key": "proposition",
+            "info": "If left null, there will be only one DEFAULT category"
+          },
+          {
+            "type": "field",
+            "label": "x axis field",
+            "key": "xAxisField",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "y axis field",
+            "key": "yAxisField",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Acteurs field",
+            "key": "acteurs",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Strategies field",
+            "key": "strategies",
+            "required": true
+          },
+          {
+            "type": "field",
+            "label": "Priorité field",
+            "key": "priorite",
+            "required": true
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Chart Settings",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Height",
+            "key": "height",
+            "required": true,
+            "min": 0
+          },
+          {
+            "type": "number",
+            "label": "Width",
+            "key": "width",
+            "required": true,
+            "min": 0
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "X axis options",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Min",
+            "key": "xAxisMin",
+            "required": true
+          },
+          {
+            "type": "number",
+            "label": "Max",
+            "key": "xAxisMax",
+            "required": true
+          },
+          {
+            "type": "number",
+            "label": "Step",
+            "key": "xAxisStep",
+            "min": 1,
+            "required": false
+          },
+          {
+            "type": "text",
+            "label": "Axis title",
+            "key": "xAxisTitle",
+            "required": false
+          }
+        ]
+      },
+      {
+        "section": true,
+        "name": "Y axis options",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Min",
+            "key": "yAxisMin",
+            "required": true
+          },
+          {
+            "type": "number",
+            "label": "Max",
+            "key": "yAxisMax",
+            "required": true
+          },
+          {
+            "type": "number",
+            "label": "Step",
+            "key": "yAxisStep",
+            "min": 1,
+            "required": false
+          },
+          {
+            "type": "text",
+            "label": "Axis title",
+            "key": "yAxisTitle",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}
