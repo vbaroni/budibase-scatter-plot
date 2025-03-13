@@ -217,6 +217,14 @@
             "required": true,
             "defaultValue": 8,
             "min": 8
+          },
+          {
+            "type": "number",
+            "label": "Acteur icon size",
+            "key": "iconSize",
+            "required": true,
+            "defaultValue": 12,
+            "min": 12
           }
         ]
       }
