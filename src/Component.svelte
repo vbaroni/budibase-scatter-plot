@@ -27,12 +27,18 @@
   export let yAxisStep;
   export let yAxisTitle;
 
+  export let diameter;
+  export let iconSize;
+  export let prioriteFontSize;
+  export let propositionFontSize;
+  export let strategieFontSize;
+
+
   $: data = dataProvider?.rows ?? [];
   $: xAxisTickAmount = (xAxisMax - xAxisMin) / xAxisStep ?? 10;
   $: yAxisTickAmount = (yAxisMax - yAxisMin) / yAxisStep ?? 10;
 
   const margin = { top: 20, right: 20, bottom: 20, left: 35 }; // Do not expose! --> If exposed, define min values!!!!!
-  const diameter = 140;
 
   const { styleable } = getContext("sdk");
   const component = getContext("component");
@@ -80,7 +86,6 @@
           {#each data as d, i}
             <ForeignCircle
               {d}
-              {diameter}
               {yScale}
               {xScale}
               {proposition}
@@ -89,6 +94,11 @@
               {acteurs}
               {strategies}
               {priorite}
+              {diameter}
+              {iconSize}
+              {prioriteFontSize}
+              {propositionFontSize}
+              {strategieFontSize}
             />
           {/each}
         </g>

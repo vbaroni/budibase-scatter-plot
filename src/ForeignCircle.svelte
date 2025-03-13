@@ -12,11 +12,13 @@
   export let strategies;
   export let priorite;
   export let diameter;
+  export let iconSize;
+  export let prioriteFontSize;
+  export let propositionFontSize;
+  export let strategieFontSize;
 
   $: centerX = xScale(+d[xAxisField]);
   $: centerY = yScale(+d[yAxisField]);
-
-  const iconSize = 12;
 </script>
 
 <g
@@ -32,21 +34,25 @@
     y={centerY - diameter / 2}
   >
     <div class="main-container">
-      <div class="priorite">
+      <div class="priorite" style="font-size: {prioriteFontSize};">
         {d[priorite]}
       </div>
 
-      <div class="proposition">
+      <div class="proposition" style="font-size: {propositionFontSize};">
         {d[proposition]}
       </div>
 
-      <div class="strategies-container">
+      <div
+        class="strategies-container"
+        style="max-height: {2 * strategieFontSize + 16};"
+      >
         {#each d[strategies] as strategie}
           <span
             class="strategie"
             style="
                   color:{strategiesMap[strategie]};
-                  border-color:{strategiesMap[strategie]}"
+                  border-color:{strategiesMap[strategie]};
+                  font-size:{strategieFontSize};"
           >
             {strategie}
           </span>
@@ -87,13 +93,11 @@
   }
 
   .priorite {
-    font-size: 9px;
     font-weight: 300;
     margin-bottom: 3px;
   }
 
   .proposition {
-    font-size: 9px;
     font-weight: 500;
     margin-bottom: 5px;
     text-align: center;
@@ -109,12 +113,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3px;
-
-    max-height: 32px;
   }
 
   .strategie {
-    font-size: 8px;
     font-weight: 400;
     border: 1px solid;
     border-radius: 10px;

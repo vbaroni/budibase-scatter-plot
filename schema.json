@@ -136,6 +136,44 @@
             "required": false
           }
         ]
+      },
+      {
+        "section": true,
+        "name": "Bubble elements sizes",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Diameter",
+            "key": "diameter",
+            "required": true,
+            "defaultValue": 140,
+            "min": 140
+          },
+          {
+            "type": "number",
+            "label": "Priorité font-size",
+            "key": "prioriteFontSize",
+            "required": true,
+            "defaultValue": 9,
+            "min": 9
+          },
+          {
+            "type": "number",
+            "label": "Proposition font-size",
+            "key": "propositionFontSize",
+            "required": true,
+            "defaultValue": 9,
+            "min": 9
+          },
+          {
+            "type": "number",
+            "label": "Strategie font-size",
+            "key": "strategieFontSize",
+            "required": true,
+            "defaultValue": 8,
+            "min": 8
+          }
+        ]
       }
     ]
   }
