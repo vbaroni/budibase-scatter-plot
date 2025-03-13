@@ -52,6 +52,13 @@
             "label": "Priorité field",
             "key": "priorite",
             "required": true
+          },
+          {
+            "type": "field",
+            "label": "New proposition field",
+            "key": "isNewProposition",
+            "required": false,
+            "defaultValue": false
           }
         ]
       },

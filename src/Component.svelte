@@ -13,6 +13,7 @@
   export let acteurs;
   export let strategies;
   export let priorite;
+  export let isNewProposition;
 
   export let height;
   export let width;
@@ -104,7 +105,7 @@
             {yAxisMax}
           />
 
-          {#each data as d, i}
+          {#each data as d}
             <ForeignCircle
               {d}
               {yScale}
@@ -120,6 +121,7 @@
               {prioriteFontSize}
               {propositionFontSize}
               {strategieFontSize}
+              {isNewProposition}
             />
           {/each}
         </g>
