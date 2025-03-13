@@ -16,23 +16,29 @@
 
   export let height;
   export let width;
+  export let axisLabelSize;
+  export let axisTitleSize;
+  export let axisStepSize;
 
   export let xAxisMin;
   export let xAxisMax;
   export let xAxisStep;
   export let xAxisTitle;
+  export let xAxisLeftLabel;
+  export let xAxisRightLabel;
 
   export let yAxisMin;
   export let yAxisMax;
   export let yAxisStep;
   export let yAxisTitle;
+  export let yAxisTopLabel;
+  export let yAxisBottomLabel;
 
   export let diameter;
   export let iconSize;
   export let prioriteFontSize;
   export let propositionFontSize;
   export let strategieFontSize;
-
 
   $: data = dataProvider?.rows ?? [];
   $: xAxisTickAmount = (xAxisMax - xAxisMin) / xAxisStep ?? 10;
@@ -52,14 +58,24 @@
   $: yScale = scaleLinear()
     .domain([yAxisMin, yAxisMax])
     .range([height - margin.bottom, margin.top]);
-
 </script>
 
 <div use:styleable={$component.styles}>
   <div class="chart-container">
     {#if data}
       <svg {width} {height}>
-        <AxisLeft {yScale} {margin} {height} {yAxisTickAmount} {yAxisTitle} />
+        <AxisLeft
+          {yScale}
+          {margin}
+          {height}
+          {yAxisTickAmount}
+          {yAxisTitle}
+          {yAxisTopLabel}
+          {yAxisBottomLabel}
+          {axisLabelSize}
+          {axisTitleSize}
+          {axisStepSize}
+        />
         <AxisBottom
           {xScale}
           {margin}
@@ -67,6 +83,11 @@
           {width}
           {xAxisTickAmount}
           {xAxisTitle}
+          {xAxisLeftLabel}
+          {xAxisRightLabel}
+          {axisLabelSize}
+          {axisTitleSize}
+          {axisStepSize}
         />
 
         <g>
@@ -108,6 +129,9 @@
 </div>
 
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
   .chart-container {
     display: flex;
     width: 100%;

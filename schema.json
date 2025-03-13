@@ -72,6 +72,27 @@
             "key": "width",
             "required": true,
             "min": 0
+          },
+          {
+            "type": "number",
+            "label": "Axis label size",
+            "key": "axisLabelSize",
+            "required": true,
+            "defaultValue": 12 
+          },
+          {
+            "type": "number",
+            "label": "Axis title size",
+            "key": "axisTitleSize",
+            "required": true,
+            "defaultValue": 20 
+          },
+          {
+            "type": "number",
+            "label": "Axis step size",
+            "key": "axisStepSize",
+            "required": true,
+            "defaultValue": 12
           }
         ]
       },
@@ -103,6 +124,18 @@
             "label": "Axis title",
             "key": "xAxisTitle",
             "required": false
+          },
+          {
+            "type": "text",
+            "label": "Left label",
+            "key": "xAxisLeftLabel",
+            "required": false
+          },
+          {
+            "type": "text",
+            "label": "Right label",
+            "key": "xAxisRightLabel",
+            "required": false
           }
         ]
       },
@@ -133,6 +166,18 @@
             "type": "text",
             "label": "Axis title",
             "key": "yAxisTitle",
+            "required": false
+          },
+          {
+            "type": "text",
+            "label": "Bottom label",
+            "key": "yAxisBottomLabel",
+            "required": false
+          },
+          {
+            "type": "text",
+            "label": "Top label",
+            "key": "yAxisTopLabel",
             "required": false
           }
         ]
