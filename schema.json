@@ -55,10 +55,9 @@
           },
           {
             "type": "field",
-            "label": "New proposition field",
-            "key": "isNewProposition",
-            "required": false,
-            "defaultValue": false
+            "label": "Proposition status field",
+            "key": "propositionStatus",
+            "required": false
           }
         ]
       },

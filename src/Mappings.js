@@ -27,3 +27,9 @@ export const colorZone = {
   upperLeft: "#B66BFF",
   upperRight: "#E5CBFF",
 };
+
+export const propositionStatusMap = {
+  old: "ancienne",
+  new: "nouvelle",
+  spotlight: "choisie"
+};

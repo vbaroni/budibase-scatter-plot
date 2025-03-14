@@ -13,7 +13,7 @@
   export let acteurs;
   export let strategies;
   export let priorite;
-  export let isNewProposition;
+  export let propositionStatus;
 
   export let height;
   export let width;
@@ -121,7 +121,7 @@
               {prioriteFontSize}
               {propositionFontSize}
               {strategieFontSize}
-              {isNewProposition}
+              {propositionStatus}
             />
           {/each}
         </g>

@@ -1,6 +1,6 @@
 <script>
   import Icons from "./Icons.svelte";
-  import { acteursMap, strategiesMap } from "./Mappings";
+  import { acteursMap, propositionStatusMap, strategiesMap } from "./Mappings";
 
   export let d;
   export let yScale;
@@ -16,10 +16,21 @@
   export let prioriteFontSize;
   export let propositionFontSize;
   export let strategieFontSize;
-  export let isNewProposition;
+  export let propositionStatus;
 
   $: centerX = xScale(+d[xAxisField]);
   $: centerY = yScale(+d[yAxisField]);
+
+  const propostionStatusStyle = (status) => {   
+    switch (status) {
+      case propositionStatusMap.new:
+        return "box-shadow: inset 0 0 15px #CCB30C; border: 1px solid #CCB30C";
+      case propositionStatusMap.spotlight:
+        return "box-shadow: inset 0 0 15px #CCB30C; border: 1px solid #CCB30C; background-color: #F7F3D8";
+      default:
+        return "";
+    }
+  };
 </script>
 
 <g
@@ -34,7 +45,10 @@
     x={centerX - diameter / 2}
     y={centerY - diameter / 2}
   >
-    <div class="main-container" style="{d[isNewProposition] === true ? "box-shadow: inset 0 0 15px #CCB30C; border: 1px solid #CCB30C" : ""}">
+    <div
+      class="main-container"
+      style={propostionStatusStyle(d[propositionStatus])}
+    >
       <div class="priorite" style="font-size: {prioriteFontSize};">
         {d[priorite]}
       </div>
