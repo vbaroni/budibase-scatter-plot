@@ -34,7 +34,7 @@
     x={centerX - diameter / 2}
     y={centerY - diameter / 2}
   >
-    <div class="main-container" style="{d[isNewProposition] === true ? "box-shadow: inset 0 0 15px #7BDB56; border: 1px solid #7BDB56" : ""}">
+    <div class="main-container" style="{d[isNewProposition] === true ? "box-shadow: inset 0 0 15px #CCB30C; border: 1px solid #CCB30C" : ""}">
       <div class="priorite" style="font-size: {prioriteFontSize};">
         {d[priorite]}
       </div>
